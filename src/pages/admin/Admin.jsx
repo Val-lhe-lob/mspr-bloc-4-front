@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Sidebar from "../../components/admin/Sidebar";
 import ProductTable from "../../components/admin/ProductTable";
-import OrderTable from "../../components/admin/OrderTable";
 import CustomerTable from "../../components/admin/CustomerTable";
-import DashboardCommercial from "../../components/admin/DashboardCommercial"; // ✅ nouveau composant
+import DashboardCommercial from "../../components/admin/DashboardCommercial";
+import CommandesProduitTabs from "../../components/admin/CommandesProduitTabs";
 
 const Admin = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -15,7 +15,7 @@ const Admin = () => {
       case "products":
         return <ProductTable />;
       case "orders":
-        return <OrderTable />;
+        return <CommandesProduitTabs />;
       case "customers":
         return <CustomerTable />;
       default:

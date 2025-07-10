@@ -5,7 +5,9 @@ import Footer from "./components/Footer";
 import CartFloating from "./components/CartFloating";
 import Home from "./pages/clients/Home";
 import PanierPage from "./pages/clients/PanierPage";
-import AdminPage from "./pages/admin/Admin"; // ✅ import de la page admin
+import AdminPage from "./pages/admin/Admin";
+import Inscription from "./components/inscription/inscription";
+import Connexion from "./components/connexion/connexion";
 
 const App = () => {
   const topRef = useRef(null);
@@ -28,9 +30,11 @@ const App = () => {
 
       <main className="min-h-screen">
         <Routes>
-          <Route path="/" element={<Home catalogueRef={catalogueRef} />} />
+          <Route path="/" element={<Connexion/>} />
+          <Route path="/login" element={<Connexion/>} />
+          <Route path="/register" element={<Inscription/>} />
           <Route path="/panier" element={<PanierPage />} />
-          <Route path="/admin" element={<AdminPage />} /> {/* ✅ nouvelle route admin */}
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </main>
 
